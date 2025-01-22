@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff6347;
+}
+
+/* Page Sections */
+section {
+  display: none; /* Hide all sections by default */
+  height: 100vh;
+  padding: 20px 20px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  background-color: #003366;
+}
+
+/* Show the targeted section */
+section:target {
+  display: block;
+}
+
+/* Home Page */
+#home {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: "Playwrite VN", serif;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff4500, /* Orange-Red */ 0 0 20px #ff4500,
+      0 0 30px #ff8c00, /* Dark Orange */ 0 0 40px #ff8c00, 0 0 50px #ffa500,
+      /* Orange */ 0 0 60px #ffa500, 0 0 70px #ff6347; /* Tomato */
+  }
+  to {
+    text-shadow: 0 0 20px #ff4500, 0 0 30px #ff8c00, 0 0 40px #ff8c00,
+      0 0 50px #ffa500, 0 0 60px #ffa500, 0 0 70px #ff6347, 0 0 80px #ff6347;
+  }
+}
+
+#home img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Hobbies Page */
+#hobbies .hobby-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#hobbies .hobby-images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#hobbies .hobby-images img:hover {
+  transform: scale(1.1);
+}
+
+/* Birthday Page */
+#birthday {
+  background: #ffe4e1;
+}
+
+#birthday textarea {
+  width: 80%;
+  height: 100px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#birthday button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#birthday button:hover {
+  background: #ff6347;
+}
+
+/* Thank You Page */
+#thank-you {
+  background: #e0ffff;
+}
+
+/* Contact Page */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#contact button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: #ff6347;
+}
+
+#contact .social-media {
+  margin-top: 20px;
+}
+
+#contact .social-media img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Slider Page */
+#slider {
+  background: #f0f8ff;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.slider-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.slider-container div {
+  position: relative;
+}
+
+.slider-container div::before {
+  content: attr(data-country);
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* CV Page */
+#cv {
+  background: #f5f5dc;
+}
+
+#cv ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cv ul li {
+  margin: 10px 0;
+}
