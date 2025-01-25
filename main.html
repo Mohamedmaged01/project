@@ -1,118 +1,169 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+VN:wght@100..400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
+    <title>MOHAMED MAGED</title>
   </head>
   <body>
-    <nav>
+    <nav id="header">
       <a href="#home">Home</a>
       <a href="#hobbies">Hobbies</a>
       <a href="#birthday">Birthday</a>
-      <a href="#contact">Contact</a>
-      <a href="#slider">Wishlist</a>
-      <a href="#cv">CV</a>
+      <a href="#wish_list">Wish list</a>
+      <a href="#cv">cv</a>
     </nav>
- 
     <section id="home">
-      <h1 class="glow">Welcome to My Portfolio</h1>
-      <dotlottie-player
-        src="https://lottie.host/bb83eeb5-e4cf-472d-8a39-3dafc7b136b8/WEv8c4tX7U.lottie"
-        background="transparent"
-        speed="1"
-        style="width: 300px; height: 300px"
-        loop
-        autoplay
-      ></dotlottie-player>
-      <div>
-        <p style="color: chocolate; font-family: 'Playwrite VN', serif">
-          Hi, I'm Mohamed Maged . I love coding, designing, and exploring new
-          technologies.
+      <div class="content_home">
+        <h1>Welcome to my portfolio</h1>
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          id="lottie"
+          src="https://lottie.host/24fc556f-b56a-4ccb-8f6f-ed0c9f367f80/L7zJPq3ymE.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        >
+        </dotlottie-player>
+        <p
+          style="
+            text-align: center;
+            color: #a31d1d;
+            font-size: 20px;
+            padding: 20px;
+          "
+        >
+          I am Mohamed a web developer with a passion for creating innovative
+          and user-friendly websites. I am always looking to improve myself
         </p>
       </div>
     </section>
-   
     <section id="hobbies">
       <h1>My Hobbies</h1>
-      <div class="hobby-images">
-        <img src="" />
-        <img src="" />
-        <img src="" />
+      <div id="hobbies-cards">
+        <div class="card">
+          <img class="img-img" src="code.jpg" />
+          <p style="padding: 10px">Coding</p>
+        </div>
+        <div
+          class="card"
+          style="
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img class="img-img" src="ball.jpg" />
+          <p style="padding: 10px">Football</p>
+        </div>
+        <div
+          class="card"
+          style="
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img class="img-img" src="game.webp" />
+          <p style="padding: 10px">Gaming</p>
+        </div>
       </div>
     </section>
-
-
     <section id="birthday">
-      <h1>My Birthday</h1>
+      <h1 style="display: flex; justify-content: center; margin-bottom: 100px">
+        My Birthday
+      </h1>
       <div id="birthday-content">
-        <img src="https://via.placeholder.com/300x200" alt="Birthday Image" />
+        <img id="birthday-image" src="birthday.jpg" alt="Birthday Image" />
+        <form id="birthday-form" action="#thank-you">
+          <textarea placeholder="HAPPY BIRTHDAY"></textarea>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
-
-
     <section id="thank-you">
       <h1>Thank You!</h1>
       <p>Your message has been submitted successfully.</p>
     </section>
-
-
-    <section id="contact">
-      <h1>Contact Me</h1>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div class="social-media">
-        <a href="#"
-          ><img src="https://via.placeholder.com/40" alt="Facebook"
-        /></a>
-        <a href="#"
-          ><img src="https://via.placeholder.com/40" alt="Twitter"
-        /></a>
-        <a href="#"
-          ><img src="https://via.placeholder.com/40" alt="Instagram"
-        /></a>
-      </div>
-    </section>
-
-
-    <section id="slider">
-      <h1>Countries I Wish to Visit</h1>
-      <div class="slider-container">
-        <div data-country="Japan">
-          <img src="https://via.placeholder.com/300x200" alt="Japan" />
-        </div>
-        <div data-country="Italy">
-          <img src="https://via.placeholder.com/300x200" alt="Italy" />
-        </div>
-        <div data-country="Australia">
-          <img src="https://via.placeholder.com/300x200" alt="Australia" />
+    <section id="wish_list">
+      <div class="slider">
+        <div class="slides">
+          <img src="piza.webp" />
+          <img src="eifel.jpg" />
+          <img src="rome.jpg" />
+          <img src="taj.jpg" />
         </div>
       </div>
     </section>
-
-
-    <section id="cv">
-      <h1>My CV</h1>
-      <ul>
-        <li><strong>Name:</strong> [Your Name]</li>
-        <li><strong>Email:</strong> [Your Email]</li>
-        <li><strong>Skills:</strong> HTML, CSS, JavaScript, etc.</li>
-        <li><strong>Experience:</strong> [Your Experience]</li>
-      </ul>
+    <section
+      id="cv"
+      style="
+        padding: 20px;
+        background-color: #1d1616;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        height: 100vh;
+        font-size: 20px;
+      "
+    >
+      <div
+        class="cv-section"
+        style="margin-bottom: 20px; background-color: #1d1616"
+      >
+        <h2 style="color: #555">Personal Information</h2>
+        <p>Name: Mohamed Maged</p>
+        <p>Email: abomaged9990@gmail.com</p>
+        <p>Phone: 01015725203</p>
+      </div>
+      <div
+        class="cv-section"
+        style="margin-bottom: 20px; background-color: #1d1616"
+      >
+        <h2 style="color: #555">Education</h2>
+        <p>Bachelor of Science in Computer Science</p>
+        <p>University of Minya, 2023</p>
+      </div>
+      <div
+        class="cv-section"
+        style="margin-bottom: 20px; background-color: #1d1616"
+      >
+        <h2 style="color: #555">Experience</h2>
+        <p>Web Developer at ITI Company</p>
+        <p>october 2024 - Present</p>
+        <p>Developed and maintained the company website</p>
+        <p>Collaborated with designers to create user-friendly interfaces</p>
+        <p>Implemented responsive design for mobile compatibility</p>
+      </div>
+      <div
+        class="cv-section"
+        style="margin-bottom: 20px; background-color: #1d1616"
+      >
+        <h2 style="color: #555">Skills</h2>
+        <p>HTML, CSS, JavaScript</p>
+        <p>React, Angular,view</p>
+        <p>Node.js, Express</p>
+        <p>Git, GitHub</p>
+      </div>
+      <div
+        class="cv-section"
+        style="margin-bottom: 20px; background-color: #1d1616"
+      >
+        <h2 style="color: #555">Projects</h2>
+        <p>Portfolio Website</p>
+      </div>
     </section>
   </body>
 </html>
